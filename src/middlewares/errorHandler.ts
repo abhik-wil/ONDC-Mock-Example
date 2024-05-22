@@ -1,6 +1,6 @@
 import {NextFunction, Request, Response, Router} from 'express';
 import {AxiosError} from 'axios';
-import {sendNack} from '../utils/sendResponses';
+import {sendNack} from '../utils/sendResponses.ts';
 
 export const globalErrorHandler = (
   err: Error,

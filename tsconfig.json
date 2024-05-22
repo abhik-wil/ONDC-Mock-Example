@@ -1,14 +1,16 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "module": "ES2022",
     "target": "ES2022",
     "lib": ["ES2022"],
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "rootDir": ".",
+    "rootDir": "./",
     "outDir": "build"
   },
-  "include": ["src/**/*.ts", "src/types/**/*.ts", "test/**/*.ts"],
+  "include": ["./src", "./src/**/*.ts", "./src/types/**/*.ts", "test/**/*.ts"],
   "ts-node": {"esm": true}
 }

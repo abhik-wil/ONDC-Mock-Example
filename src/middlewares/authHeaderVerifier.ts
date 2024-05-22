@@ -1,6 +1,6 @@
 import {NextFunction, Request, Response} from 'express';
 import {verifyHeader} from '../utils';
-import {sendNack} from '../utils/sendResponses';
+import {sendNack} from '../utils/sendResponses.ts';
 
 export const authValidatorMiddleware = async (
   req: Request,

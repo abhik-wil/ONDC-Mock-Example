@@ -1,11 +1,11 @@
 import {Router} from 'express';
-import {onCancelController} from './onCancel';
-import {onConfirmController} from './onConfirm';
-import {onInitController} from './onInit';
-import {onSearchController} from './onSearch';
-import {onSelectController} from './onSelect';
-import {onStatusController} from './onStatus';
-import {onUpdateController} from './onUpdate';
+import {onCancelController} from './onCancel.ts';
+import {onConfirmController} from './onConfirm.ts';
+import {onInitController} from './onInit.ts';
+import {onSearchController} from './onSearch.ts';
+import {onSelectController} from './onSelect.ts';
+import {onStatusController} from './onStatus.ts';
+import {onUpdateController} from './onUpdate.ts';
 
 export const bppRouter = Router();
 
