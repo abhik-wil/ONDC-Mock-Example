@@ -1,12 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 // import {config} from './utils';
-import {bapRouter, bppRouter} from './controllers';
+import {bapRouter, bppRouter} from './controllers/index.ts';
 import {
   errorHandlingWrapper,
   globalErrorHandler,
   requestParser,
-} from './middlewares';
+} from './middlewares/index.ts';
 
 const app = express();
 

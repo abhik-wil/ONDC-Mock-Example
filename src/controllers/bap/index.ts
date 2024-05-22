@@ -1,11 +1,11 @@
 import {Router} from 'express';
-import {searchController} from './search';
-import {selectController} from './select';
-import {cancelController} from './cancel';
-import {confirmController} from './confirm';
-import {initController} from './init';
-import {statusController} from './status';
-import {updateController} from './update';
+import {searchController} from './search.ts';
+import {selectController} from './select.ts';
+import {cancelController} from './cancel.ts';
+import {confirmController} from './confirm.ts';
+import {initController} from './init.ts';
+import {statusController} from './status.ts';
+import {updateController} from './update.ts';
 
 export const bapRouter = Router();
 

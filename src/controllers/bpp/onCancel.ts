@@ -1,5 +1,5 @@
 import {NextFunction, Request, Response} from 'express';
-import {sendAck} from '../../utils/sendResponses';
+import {sendAck} from '../../utils/sendResponses.ts';
 
 export const onCancelController = (
   _req: Request,

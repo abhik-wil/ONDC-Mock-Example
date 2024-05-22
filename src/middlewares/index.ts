@@ -1,2 +1,2 @@
-export * from './errorHandler';
-export * from './requestParser';
+export * from './errorHandler.ts';
+export * from './requestParser.ts';
