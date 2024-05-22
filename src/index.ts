@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-// import {config} from './utils';
+import {config} from './utils';
 import {bapRouter, bppRouter} from './controllers';
 import {
   errorHandlingWrapper,
@@ -18,7 +18,6 @@ app.use('/bpp', errorHandlingWrapper(bppRouter));
 app.use('/bap', errorHandlingWrapper(bapRouter));
 app.use(globalErrorHandler);
 
-app.listen(3000, () => {
-  console.log('PROCESS ENV', process.env.PORT);
-  console.log(`[server]: Server is running at PORT: ${3000}`);
+app.listen(config.port, () => {
+  console.log(`[server]: Server is running at PORT: ${config.port}`);
 });

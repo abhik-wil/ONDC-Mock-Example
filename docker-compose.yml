@@ -1,0 +1,10 @@
+version: '3'
+services:
+  redis:
+    image: "redis:latest"
+    container_name: "redis"
+    ports:
+      - "${REDIS_PORT}:6379"
+    environment:
+      - REDIS_USERNAME=${REDIS_USER}
+      - REDIS_PASSWORD=${REDIS_PASS}

@@ -1,9 +1,8 @@
-export {};
+// types/express.d.ts
+import * as express from 'express';
 
-declare global {
-  namespace Express {
-    export interface Request {
-      rawBody?: Buffer;
-    }
+declare module 'express-serve-static-core' {
+  interface Request {
+    rawBody?: Buffer;
   }
 }

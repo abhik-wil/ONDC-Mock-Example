@@ -1,7 +1,6 @@
 {
   "name": "ondc-request-utility",
   "author": "Abhik Banerjee",
-  "type": "module",
   "version": "0.0.1",
   "keywords": [
     "ondc",
@@ -28,7 +27,10 @@
     "prepare": "npm.cmd run compile",
     "pretest": "npm.cmd run compile",
     "posttest": "npm.cmd run lint",
-    "dev": "nodemon --exec node --no-warnings=ExperimentalWarning --loader ts-node/esm -r dotenv/config ./src/index.ts"
+    "redis:up": "docker compose up redis",
+    "redis:down": "docker compose down redis",
+    "dev": "nodemon --exec \"ts-node\" ./src/index.ts",
+    "start:dev": "npm run redis:up && npm run dev"
   },
   "engines": {
     "node": ">=20"
@@ -36,6 +38,7 @@
   "dependencies": {
     "axios": "^1.7.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "ioredis": "^5.4.1",
     "joi": "^17.13.1",

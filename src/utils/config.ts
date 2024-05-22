@@ -1,5 +1,5 @@
 import * as Joi from 'joi';
-
+import 'dotenv/config'
 // Define a schema for validation
 const envSchema = Joi.object({
   PORT: Joi.number().required(),
@@ -11,7 +11,7 @@ const envSchema = Joi.object({
   UNIQUE_KEY: Joi.string().required(),
   SUBSCRIBER_ID: Joi.string().required(),
 }).unknown(); // allow unknown keys
-console.log("PROCESS.ENV :::", process.env.PORT)
+
 // Validate environment variables
 const {error, value: envVars} = envSchema.validate(process.env, {
   abortEarly: false,

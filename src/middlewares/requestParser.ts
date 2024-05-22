@@ -8,7 +8,7 @@ export const requestParser = (
   if (!req.body) return next();
   try {
     if (req.headers['content-type'] === 'application/json') {
-      req.rawBody = req.body;
+      (req as any).rawBody = req.body;
       req.body = JSON.parse(req.body.toString());
       // console.log("REQ BODY PARSED", Object.keys(req.body));
 
