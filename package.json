@@ -27,7 +27,7 @@
     "prepare": "npm.cmd run compile",
     "pretest": "npm.cmd run compile",
     "posttest": "npm.cmd run lint",
-    "redis:up": "docker compose up redis",
+    "redis:up": "docker compose up -d redis",
     "redis:down": "docker compose down redis",
     "dev": "nodemon --exec \"ts-node\" ./src/index.ts",
     "start:dev": "npm run redis:up && npm run dev"

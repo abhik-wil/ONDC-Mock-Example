@@ -15,7 +15,7 @@ function sendAck(res: Response, statusCode?: number) {
   return res.status(statusCode || 200).json({
     message: {
       ack: {
-        status: 'AACK',
+        status: 'ACK',
       },
     },
   });

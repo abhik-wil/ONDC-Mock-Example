@@ -5,6 +5,6 @@ services:
     container_name: "redis"
     ports:
       - "${REDIS_PORT}:6379"
-    environment:
-      - REDIS_USERNAME=${REDIS_USER}
-      - REDIS_PASSWORD=${REDIS_PASS}
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
